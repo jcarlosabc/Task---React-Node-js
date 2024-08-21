@@ -21,6 +21,10 @@ app.use((req, res) => {
   res.send("Ruta no encontrada");
 });
 
+app.use("/hola", (req, res) => {
+    res.send("Server Corriendo");
+});
+
 app.listen(app.get('port'), () => {
   console.log("***********************************************************")
   console.log('===> 🚀 SERVIDOR CORRIENDO en http://localhost:' + app.get('port')) 
