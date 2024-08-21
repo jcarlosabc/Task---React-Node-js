@@ -13,15 +13,15 @@ global.btn_mydomain = 'http://localhost:' + port
 app.set('port' , port);
 
 // Importar y usar la ruta de tareas
-app.use('/', require('./router/index.router'));
-app.use('/', require('./router/task.routes'));
+// app.use('/', require('./router/index.router'));
+// app.use('/', require('./router/task.routes'));
 
 // Ruta para manejar errores de rutas no encontradas
 app.use((req, res) => {
   res.send("Ruta no encontrada");
 });
 
-app.use("/hola", (req, res) => {
+app.use("/", (req, res) => {
     res.send("Server Corriendo");
 });
 
